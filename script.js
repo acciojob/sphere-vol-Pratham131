@@ -1,11 +1,20 @@
 function volume_sphere() {
     //Write your code here
-	const radius = document.getElementById("radius").value;
-	
-	let volumeOfSphere = (4/3) * Math.PI * Math.pow(radius, 3);
+	const radius = parseFloat(document.getElementById("Radius").value);
 
-	document.getElementById("volume").value = volumeOfSphere
-		// .toFixed(2);
+  if (isNaN(radius) || radius < 0) {
+    alert("Please enter a valid positive number for the radius.");
+    return;
+  }
+
+  const volume = (4 / 3) * Math.PI * Math.pow(radius, 3);
+  document.getElementById("volume").value = volume.toFixed(2);
+	// const radius = document.getElementById("radius").value;
+	
+	// let volumeOfSphere = (4/3) * Math.PI * Math.pow(radius, 3);
+
+	// document.getElementById("volume").value = volumeOfSphere
+	// 	// .toFixed(2);
    
 } 
 
