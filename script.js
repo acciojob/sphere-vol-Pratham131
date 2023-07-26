@@ -5,7 +5,7 @@ const output = document.getElementById("volume")
 function volume_sphere() {
     //Write your code here
 	const radi = parseInt(radius.value)
-
+	output.value = "NaN";
   if (isNaN(radi) || radi <= 0) {
 	  
     alert("Please enter a valid positive number for the radius.");
