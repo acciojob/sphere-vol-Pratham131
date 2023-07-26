@@ -6,7 +6,7 @@ function volume_sphere() {
 	const radi = parseInt(radius.value)
 
   if (isNaN(radi) || radi <= 0) {
-    // alert("Please enter a valid positive number for the radius.");
+    alert("Please enter a valid positive number for the radius.");
     return false;
   }
 
@@ -16,5 +16,7 @@ function volume_sphere() {
 
    
 } 
-
-window.onload = document.getElementById('MyForm').onsubmit = volume_sphere;
+window.onload = function() {
+    document.getElementById('MyForm').onsubmit = volume_sphere;
+};
+// window.onload = document.getElementById('MyForm').onsubmit = volume_sphere;
