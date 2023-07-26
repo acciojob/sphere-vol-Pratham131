@@ -1,4 +1,5 @@
 const radius = document.getElementById("radius");
+console.log(radius)
 const output = document.getElementById("volume")
 
 function volume_sphere() {
@@ -6,12 +7,13 @@ function volume_sphere() {
 	const radi = parseInt(radius.value)
 
   if (isNaN(radi) || radi <= 0) {
+	  
     alert("Please enter a valid positive number for the radius.");
     return false;
   }
 
   const volume = (4 / 3) * Math.PI * Math.pow(radi, 3);
-  output.textContent = volume;
+  output.value = volume.toFixed(4);
 	return false;
 
    
